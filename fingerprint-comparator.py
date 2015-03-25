@@ -25,12 +25,12 @@ def printJson():
     print t
 
 
-parser = argparse.ArgumentParser(description='Process some integers.')
+parser = argparse.ArgumentParser(description='create fingerprint for strings and compare them')
 
 parser.add_argument('--input', metavar='inputFile', required=True,
-                    help='')
+                    help='input file which contains strings, each line for one string')
 parser.add_argument('--remove-words', metavar='word1 word2 ...', nargs='+', default=[],
-                    help='')
+                    help='remove these words and then create fingerprints')
 parser.add_argument("--output-type", choices=["text", "json"], default="text",
                     help="")
 
